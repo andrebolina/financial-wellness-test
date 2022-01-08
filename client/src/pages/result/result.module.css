@@ -1,3 +1,4 @@
+@value v-blueGray400, v-blueGray900, v-brandColorPrimary, v-neutralWhite from 'theme/palette.css';
 @value b-desktop from 'theme/breakpoints.css';
 
 .wrapper {
@@ -12,7 +13,7 @@
 }
 
 .subtitle {
-  color: #001C95;
+  color: v-brandColorPrimary;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
@@ -26,7 +27,7 @@
   width: 544px;
   max-width: 100%;
   text-align: center;
-  background-color: #ffffff;
+  background-color: v-neutralWhite;
   padding: 16px;
   margin: 24px auto;
 }
@@ -52,12 +53,12 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #1E2A32;
+  color: v-blueGray900;
 }
 
 .paragraph {
   line-height: 21px;
-  color: #708797
+  color: v-blueGray400;
 }
 
 .secondaryButton {
@@ -76,9 +77,9 @@
   font-size: 16px;
   line-height: 16px;
   text-align: center;
-  color: #001C95;
+  color: v-brandColorPrimary;
 
-  border: 2px solid #001C95;
+  border: 2px solid v-brandColorPrimary;
   border-radius: 32px;
   text-decoration: none;
 }

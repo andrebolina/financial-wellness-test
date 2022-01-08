@@ -1,0 +1,13 @@
+@value v-neutralWhite from 'theme/palette.css';
+
+.header {
+  height: 80px;
+  background-color: v-neutralWhite
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

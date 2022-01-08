@@ -1,9 +1,11 @@
-.health-bar-container {
+@value v-green500, v-red700, v-sun700 from 'theme/palette.css';
+
+.container {
   position: relative;
   height: 16px;
 }
 
-.health-level {
+.level {
   position: absolute;
   height: 100%;
   border: 2px solid #ffffff;
@@ -11,18 +13,18 @@
   background-color: #E9EEF2;
 }
 
-.health-level:nth-of-type(1) {
+.level:nth-of-type(1) {
   z-index: 3;
   width: 33.3%;
 }
 
-.health-level:nth-of-type(2) {
+.level:nth-of-type(2) {
   z-index: 2;
   width: 36.6%;
   left: 30%;
 }
 
-.health-level:nth-of-type(3) {
+.level:nth-of-type(3) {
   z-index: 1;
   width: 40%;
   left: 60%;
@@ -41,7 +43,7 @@
 }
 
 @media screen and (min-width: 600px) {
-  .health-bar-container {
+  .container {
     height: 24px;
   }
 }

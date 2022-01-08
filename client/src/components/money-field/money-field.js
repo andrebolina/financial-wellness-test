@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import './money-field.css';
+import styles from './money-field.module.css';
 
 function MoneyField({ label, onChange = () => { } }) {
   const [value, setValue] = useState("");
@@ -13,9 +13,9 @@ function MoneyField({ label, onChange = () => { } }) {
   }
 
   return (
-    <div className="field-container">
-      <label className="field-label">{label}</label>
-      <input className="field-input" value={value} onChange={handleOnChange} />
+    <div className={styles.container}>
+      <label className={styles.label}>{label}</label>
+      <input className={styles.input} value={value} onChange={handleOnChange} />
     </div>
   );
 }

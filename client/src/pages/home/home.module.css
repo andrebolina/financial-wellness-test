@@ -1,4 +1,5 @@
-@value v-brandColorPrimary from 'theme/palette.css';
+@value v-blueGray400, v-blueGray900, v-brandColorPrimary, v-neutralWhite from 'theme/palette.css';
+@value b-desktop from 'theme/breakpoints.css';
 
 .wrapper {
   padding: 24px 16px;
@@ -12,7 +13,7 @@
 }
 
 .subtitle {
-  color: #001C95;
+  color: v-brandColorPrimary;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
@@ -26,17 +27,17 @@
   width: 544px;
   max-width: 100%;
   text-align: center;
-  background-color: #ffffff;
+  background-color: v-neutralWhite;
   padding: 16px;
   margin: 24px auto;
 }
 
-.form-header {
+.formHeader {
   display: flex;
   flex-direction: column;
 }
 
-.form-title {
+.formTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,27 +45,27 @@
   margin-top: 16px;
 }
 
-.heading-small {
+.headingSmall {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #1E2A32;
+  color: v-blueGray900;
 }
 
 .paragraph {
   line-height: 21px;
-  color: #708797
+  color: v-blueGray400;
 }
 
-.form-inputs {
+.formInputs {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 16px 0;
 }
 
-.input-container:first-of-type {
+.inputContainer:first-of-type {
   margin-bottom: 16px;
 }
 
@@ -84,14 +85,14 @@
   font-size: 16px;
   line-height: 16px;
   text-align: center;
-  color: #fff;
+  color: v-neutralWhite;
 
   background-color: v-brandColorPrimary;
   border: none;
   border-radius: 32px;
 }
 
-@media screen and (min-width: 600px) {
+@media b-desktop {
   .container {
     min-height: calc(100vh - 182px);
   }
@@ -100,21 +101,21 @@
     text-align: left;
   }
 
-  .form-container {
+  .formContainer {
     padding: 32px;
   }
 
-  .form-header {
+  .formHeader {
     flex-direction: row;
     text-align: left;
   }
 
-  .form-title {
+  .formTitle {
     margin-top: 0;
     margin-left: 16px;
   }
 
-  .heading-small {
+  .headingSmall {
     font-size: 24px;
     line-height: 28.8px;
   }
@@ -124,17 +125,17 @@
     line-height: 24px;
   }
 
-  .form-inputs {
+  .formInputs {
     flex-direction: row;
     justify-content: space-between;
     padding: 24px 0 32px;
   }
 
-  .input-container {
+  .inputContainer {
     width: 232px;
   }
 
-  .input-container:first-of-type {
+  .inputContainer:first-of-type {
     margin-bottom: 0;
     margin-right: 16px;
   }

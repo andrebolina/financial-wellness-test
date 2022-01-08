@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Footer, MoneyField} from 'components';
+import { Footer, MoneyField } from 'components';
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 
@@ -16,25 +16,25 @@ function Home() {
   }
 
   return (
-    <div className="wrapper">
-      <div className="container">
-        <p className="subtitle">Let's find out your <span className="semibold">financial wellness score.</span></p>
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        <p className={styles.subtitle}>Let's find out your <span className={styles.semibold}>financial wellness score.</span></p>
         <form className={styles.formContainer} onSubmit={handleFormSubmit}>
-          <div className="form-header">
+          <div className={styles.formHeader}>
             <div>
               <img src={logoCircle} alt="" />
             </div>
-            <div className="form-title">
-              <h1 className="heading-small">Financial wellness test</h1>
-              <p className="paragraph">Enter your financial information below</p>
+            <div className={styles.formTitle}>
+              <h1 className={styles.headingSmall}>Financial wellness test</h1>
+              <p className={styles.paragraph}>Enter your financial information below</p>
             </div>
           </div>
 
-          <div className="form-inputs">
-            <div className="input-container">
+          <div className={styles.formInputs}>
+            <div className={styles.inputContainer}>
               <MoneyField label="Annual income" onChange={setAnnualIncome} />
             </div>
-            <div className="input-container">
+            <div className={styles.inputContainer}>
               <MoneyField label="Monthly Costs" onChange={setMonthlyCosts} />
             </div>
           </div>

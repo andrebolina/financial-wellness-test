@@ -1,4 +1,7 @@
-footer#legal-footer .footer-content {
+@value v-blueGray400 from 'theme/palette.css';
+@value b-desktop from 'theme/breakpoints.css';
+
+.content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,22 +10,22 @@ footer#legal-footer .footer-content {
   padding: 11px 16px;
 }
 
-footer#legal-footer .footer-content .footer-icon {
+.icon {
   margin-bottom: 16px;
 }
 
-footer#legal-footer .footer-content .footer-copy {
-  color: #708797;
+.description {
+  color: v-blueGray400;
 }
 
-@media screen and (min-width: 600px) {
-  footer#legal-footer .footer-content {
+@media b-desktop {
+  .content {
     height: 54px;
     flex-direction: row;
     text-align: left;
   }
 
-  footer#legal-footer .footer-content .footer-icon {
+  .icon {
     margin-bottom: 0;
     margin-right: 16px;
   }

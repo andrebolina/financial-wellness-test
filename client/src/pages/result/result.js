@@ -1,6 +1,4 @@
-import { Footer, HealthBar} from 'components';
-
-import { HEALTHY } from 'constants/wellness-levels'
+import { Footer, HealthBar } from 'components';
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 
@@ -16,7 +14,7 @@ function Result() {
             <img src={logoCircle} alt="" />
           </div>
 
-          <HealthBar level={HEALTHY} />
+          <HealthBar level={1} />
 
           <div className={styles.resultMessage}>
             <h1 className={styles.headingSmall}>Congratulations!</h1>

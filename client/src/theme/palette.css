@@ -1,2 +1,10 @@
-/* primary brand colors */
+@value v-blueGray50: #E9EEF2;
+@value v-blueGray400: #708797;
+@value v-blueGray600: #4D6475;
+@value v-blueGray900: #1E2A32;
 @value v-brandColorPrimary: #001C95;
+@value v-green500: #04C761;
+@value v-green500: #04C761;
+@value v-neutralWhite: #FFFFFF;
+@value v-red700: #D32A36;
+@value v-sun700: #FFC032;

@@ -1,13 +1,13 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 
-import './health-bar.css';
+import styles from './health-bar.module.css';
 
 function HealthBar({ level }) {
   return (
-    <div className="health-bar-container">
-      <div className={classnames("health-level", { "healthy": level === 3, "medium": level === 2, "low": level === 1 })}></div>
-      <div className={classnames("health-level", { "healthy": level === 3, "medium": level === 2 })}></div>
-      <div className={classnames("health-level", { "healthy": level === 1 })}></div>
+    <div className={styles.container}>
+      <div className={classNames(styles.level, { [styles.healthy]: level === 3, [styles.medium]: level === 2, [styles.low]: level === 1 })}></div>
+      <div className={classNames(styles.level, { [styles.healthy]: level === 3, [styles.medium]: level === 2 })}></div>
+      <div className={classNames(styles.level, { [styles.healthy]: level === 3 })}></div>
     </div>
   );
 }
