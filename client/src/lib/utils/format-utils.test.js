@@ -16,8 +16,8 @@ describe('Format Utils', () => {
     });
 
     it('formats invalid values', () => {
-      expect(formatMoneyValue('')).toBe('0');
-      expect(formatMoneyValue('a')).toBe('0');
+      expect(formatMoneyValue('')).toBe('');
+      expect(formatMoneyValue('a')).toBe('');
     });
   });
 });

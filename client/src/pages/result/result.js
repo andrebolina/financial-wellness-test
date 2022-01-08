@@ -1,4 +1,4 @@
-import { Footer, HealthBar } from 'components';
+import { Footer, HealthBar } from 'lib/components';
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 

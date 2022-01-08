@@ -1,4 +1,4 @@
-@value v-blueGray50, v-blueGray600, v-red700 from 'theme/palette.css';
+@value v-blueGray50, v-bluegray100, v-blueGray600, v-red700 from 'theme/palette.css';
 
 .container {
   display: flex;
@@ -28,6 +28,11 @@
   line-height: 28.8px;
 
   background: url(assets/images/icons/dollar-sign.svg) no-repeat scroll 12px 14px;
+  color: v-blueGray600;
+}
+
+::placeholder {
+  color: v-bluegray100;
 }
 
 .input.error {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Footer, MoneyField } from 'components';
+import { Footer, MoneyField } from 'lib/components';
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 

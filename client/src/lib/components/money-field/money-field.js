@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { formatMoneyValue } from 'utils';
+import { formatMoneyValue } from 'lib/utils';
 
 import styles from './money-field.module.css';
 
