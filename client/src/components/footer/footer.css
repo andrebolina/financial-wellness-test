@@ -1,0 +1,29 @@
+footer#legal-footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 11px 16px;
+}
+
+footer#legal-footer .footer-content .footer-icon {
+  margin-bottom: 16px;
+}
+
+footer#legal-footer .footer-content .footer-copy {
+  color: #708797;
+}
+
+@media screen and (min-width: 600px) {
+  footer#legal-footer .footer-content {
+    height: 54px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  footer#legal-footer .footer-content .footer-icon {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+}

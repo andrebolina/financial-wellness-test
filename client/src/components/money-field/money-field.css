@@ -1,0 +1,25 @@
+.field-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  color: #1E2A32;
+  text-align: left;
+  line-height: 21px;
+  margin-bottom: 4px;
+}
+
+.field-input {
+  height: 56px;
+  border: 1px solid #E9EEF2;
+  border-radius: 4px;
+  padding-left: 44px;
+
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+
+  background: url(../../assets/images/icons/dollar-sign.svg) no-repeat scroll 12px 14px;
+}
