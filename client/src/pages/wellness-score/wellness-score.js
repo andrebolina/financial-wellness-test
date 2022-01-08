@@ -2,9 +2,9 @@ import { Footer, HealthBar } from 'lib/components';
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 
-import styles from './result.module.css';
+import styles from './wellness-score.module.css';
 
-function Result() {
+function WellnessScore() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -29,4 +29,4 @@ function Result() {
   );
 }
 
-export default Result;
+export default WellnessScore;

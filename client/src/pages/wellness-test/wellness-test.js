@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Footer, Header } from 'lib/components';
 
 import WellnessForm from 'pages/wellness-form';
-import Result from 'pages/result';
+import WellnessScore from 'pages/wellness-score';
 
 function WellnessTest() {
   const [formValues, setFormValues] = useState(null);
@@ -10,7 +10,7 @@ function WellnessTest() {
   return (
     <>
       <Header />
-      {!formValues ? <WellnessForm setFormValues={setFormValues} /> : <Result setFormValues={setFormValues} formValues={formValues} />}
+      {!formValues ? <WellnessForm setFormValues={setFormValues} /> : <WellnessScore setFormValues={setFormValues} formValues={formValues} />}
       <Footer />
     </>
   )
