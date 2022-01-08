@@ -1,16 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from 'pages/home';
-import Result from 'pages/result';
-import Header from 'lib/components/header';
+import WellnessTest from 'pages/wellness-test';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/result" element={<Result />} />
+        <Route path="/" element={<WellnessTest />} />
       </Routes>
     </BrowserRouter>
   );
