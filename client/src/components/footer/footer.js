@@ -1,6 +1,6 @@
 import './footer.css';
 
-import lockIcon from '../../assets/images/icons/lock.svg';
+import lockIcon from 'assets/images/icons/lock.svg';
 
 function Footer() {
   return (

@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import Footer from '../../components/footer';
-import MoneyField from '../../components/money-field';
+import { Footer, MoneyField} from 'components';
 
-import logoCircle from '../../assets/images/brand/origin-circle.png';
+import logoCircle from 'assets/images/brand/origin-circle.png';
 
-import './home.css';
+import styles from './home.module.css';
 
 function Home() {
   const [annualIncome, setAnnualIncome] = useState(null);
@@ -20,7 +19,7 @@ function Home() {
     <div className="wrapper">
       <div className="container">
         <p className="subtitle">Let's find out your <span className="semibold">financial wellness score.</span></p>
-        <form className="form-container" onSubmit={handleFormSubmit}>
+        <form className={styles.formContainer} onSubmit={handleFormSubmit}>
           <div className="form-header">
             <div>
               <img src={logoCircle} alt="" />
@@ -40,7 +39,7 @@ function Home() {
             </div>
           </div>
 
-          <button className="primary-button">Continue</button>
+          <button className={styles.primaryButton}>Continue</button>
         </form>
       </div>
       <Footer />

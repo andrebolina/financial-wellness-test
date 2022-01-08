@@ -1,3 +1,5 @@
+@value b-desktop from 'theme/breakpoints.css';
+
 .wrapper {
   padding: 24px 16px;
 }
@@ -20,7 +22,7 @@
   font-weight: 600;
 }
 
-.result-container {
+.resultContainer {
   width: 544px;
   max-width: 100%;
   text-align: center;
@@ -29,7 +31,7 @@
   margin: 24px auto;
 }
 
-.result-header {
+.resultHeader {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,15 +39,15 @@
   margin-bottom: 24px;
 }
 
-.result-header img {
+.resultHeader img {
   max-width: max-content;
 }
 
-.result-message {
+.resultMessage {
   padding: 24px 0 32px;
 }
 
-.heading-small {
+.headingSmall {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -58,7 +60,7 @@
   color: #708797
 }
 
-.secondary-button {
+.secondaryButton {
   cursor: pointer;
 
   display: flex;
@@ -81,7 +83,7 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 600px) {
+@media b-desktop {
   .container {
     min-height: calc(100vh - 182px);
   }
@@ -90,20 +92,20 @@
     text-align: left;
   }
 
-  .result-container {
+  .resultContainer {
     padding: 32px;
   }
 
-  .result-header {
+  .resultHeader {
     flex-direction: row;
     text-align: left;
   }
 
-  .result-message {
+  .resultMessage {
     padding-bottom: 35px;
   }
 
-  .heading-small {
+  .headingSmall {
     font-size: 24px;
     line-height: 28.8px;
   }

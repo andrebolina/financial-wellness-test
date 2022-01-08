@@ -1,30 +1,29 @@
-import Footer from '../../components/footer';
-import HealthBar from '../../components/health-bar';
+import { Footer, HealthBar} from 'components';
 
-import { HEALTHY, MEDIUM, LOW } from '../../constants'
+import { HEALTHY } from 'constants/wellness-levels'
 
-import logoCircle from '../../assets/images/brand/origin-circle.png';
+import logoCircle from 'assets/images/brand/origin-circle.png';
 
-import './result.css';
+import styles from './result.module.css';
 
 function Result() {
   return (
-    <div className="wrapper">
-      <div className="container">
-        <p className="subtitle">Here's your <span className="semibold">financial wellness score</span>:</p>
-        <div className="result-container">
-          <div className="result-header">
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        <p className={styles.subtitle}>Here's your <span className={styles.semibold}>financial wellness score</span>:</p>
+        <div className={styles.resultContainer}>
+          <div className={styles.resultHeader}>
             <img src={logoCircle} alt="" />
           </div>
 
           <HealthBar level={HEALTHY} />
 
-          <div className="result-message">
-            <h1 className="heading-small">Congratulations!</h1>
-            <p className="paragraph">Your financial wellness score is <span className="semibold">Healthy</span>.</p>
+          <div className={styles.resultMessage}>
+            <h1 className={styles.headingSmall}>Congratulations!</h1>
+            <p className={styles.paragraph}>Your financial wellness score is <span className={styles.semibold}>Healthy</span>.</p>
           </div>
 
-          <a className="secondary-button" href="/">Return</a>
+          <a className={styles.secondaryButton} href="/">Return</a>
         </div>
       </div>
       <Footer />

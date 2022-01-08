@@ -1,3 +1,5 @@
+@value v-brandColorPrimary from 'theme/palette.css';
+
 .wrapper {
   padding: 24px 16px;
 }
@@ -20,7 +22,7 @@
   font-weight: 600;
 }
 
-.form-container {
+.formContainer {
   width: 544px;
   max-width: 100%;
   text-align: center;
@@ -66,7 +68,7 @@
   margin-bottom: 16px;
 }
 
-.primary-button {
+.primaryButton {
   cursor: pointer;
 
   display: flex;
@@ -84,7 +86,7 @@
   text-align: center;
   color: #fff;
 
-  background-color: #001C95;
+  background-color: v-brandColorPrimary;
   border: none;
   border-radius: 32px;
 }

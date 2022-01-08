@@ -1,6 +1,6 @@
 import './header.css';
 
-import logo from '../../assets/images/brand/origin-logo.png';
+import logo from 'assets/images/brand/origin-logo.png';
 
 function Header() {
   return (
