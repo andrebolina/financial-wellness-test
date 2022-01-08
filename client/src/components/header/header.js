@@ -6,7 +6,7 @@ function Header() {
   return (
     <header id="main-header" className={styles.header}>
       <div className={styles.content}>
-        <img src={logo} alt="Origin" />
+        <img src={logo} alt="Origin Logo" />
       </div>
     </header>
   );

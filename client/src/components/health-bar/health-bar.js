@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import styles from './health-bar.module.css';
@@ -11,5 +12,9 @@ function HealthBar({ level }) {
     </div>
   );
 }
+
+HealthBar.propTypes = {
+  level: PropTypes.number.isRequired
+};
 
 export default HealthBar;

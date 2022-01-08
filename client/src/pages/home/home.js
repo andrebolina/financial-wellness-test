@@ -32,10 +32,10 @@ function Home() {
 
           <div className={styles.formInputs}>
             <div className={styles.inputContainer}>
-              <MoneyField label="Annual income" onChange={setAnnualIncome} />
+              <MoneyField label="Annual income" onChange={setAnnualIncome} placeholder='0' />
             </div>
             <div className={styles.inputContainer}>
-              <MoneyField label="Monthly Costs" onChange={setMonthlyCosts} />
+              <MoneyField label="Monthly Costs" onChange={setMonthlyCosts} placeholder='0' />
             </div>
           </div>
 

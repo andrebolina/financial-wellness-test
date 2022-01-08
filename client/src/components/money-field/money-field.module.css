@@ -1,4 +1,4 @@
-@value v-blueGray50, v-blueGray600 from 'theme/palette.css';
+@value v-blueGray50, v-blueGray600, v-red700 from 'theme/palette.css';
 
 .container {
   display: flex;
@@ -10,6 +10,10 @@
   text-align: left;
   line-height: 21px;
   margin-bottom: 4px;
+}
+
+.label.error {
+  color: v-red700;
 }
 
 .input {
@@ -24,4 +28,15 @@
   line-height: 28.8px;
 
   background: url(assets/images/icons/dollar-sign.svg) no-repeat scroll 12px 14px;
+}
+
+.input.error {
+  border-color: v-red700;
+}
+
+.errorMessage {
+  color: v-red700;
+  text-align: left;
+  font-size: 12px;
+  line-height: 24px;
 }
