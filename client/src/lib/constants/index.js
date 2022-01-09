@@ -1,1 +1,1 @@
-export * from './wellness-levels';
+export * from './wellness-scores';

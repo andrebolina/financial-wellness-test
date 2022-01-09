@@ -12,7 +12,7 @@
   font-weight: 600;
 }
 
-.resultContainer {
+.container {
   width: 544px;
   max-width: 100%;
   text-align: center;
@@ -21,20 +21,26 @@
   margin: 24px auto;
 }
 
-.resultHeader {
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px auto 32px;
+}
+
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 24px;
 }
 
-.resultHeader img {
+.header img {
   max-width: max-content;
 }
 
-.resultMessage {
-  padding: 24px 0 32px;
+.message {
+  padding-top: 24px;
 }
 
 .headingSmall {
@@ -61,17 +67,17 @@
     text-align: left;
   }
 
-  .resultContainer {
+  .container {
     padding: 32px;
   }
 
-  .resultHeader {
+  .header {
     flex-direction: row;
     text-align: left;
   }
 
-  .resultMessage {
-    padding-bottom: 35px;
+  .resultContainer {
+    margin-bottom: 35px;
   }
 
   .headingSmall {
