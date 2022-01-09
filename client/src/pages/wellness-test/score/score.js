@@ -2,9 +2,9 @@ import { Button, HealthBar } from 'lib/components';
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 
-import styles from './wellness-score.module.css';
+import styles from './score.module.css';
 
-function WellnessScore({ formValues, setFormValues }) {
+function Score({ formValues, onReturn }) {
   console.log(formValues);
 
   return (
@@ -22,10 +22,10 @@ function WellnessScore({ formValues, setFormValues }) {
           <p className={styles.paragraph}>Your financial wellness score is <span className={styles.semibold}>Healthy</span>.</p>
         </div>
 
-        <Button classes={{ button: styles.button }} onClick={() => setFormValues(null)}>Return</Button>
+        <Button classes={{ button: styles.button }} onClick={onReturn}>Return</Button>
       </div>
     </>
   );
 }
 
-export default WellnessScore;
+export default Score;

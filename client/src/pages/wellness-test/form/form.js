@@ -3,9 +3,9 @@ import { Button, MoneyField } from 'lib/components';
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 
-import styles from './wellness-form.module.css';
+import styles from './form.module.css';
 
-function WellnessForm({ setFormValues }) {
+function Form({ setFormValues }) {
   const [hasSubmittedOnce, setHasSubmittedOnce] = useState(false);
   const [annualIncome, setAnnualIncome] = useState(null);
   const [monthlyCosts, setMonthlyCosts] = useState(null);
@@ -48,4 +48,4 @@ function WellnessForm({ setFormValues }) {
   );
 }
 
-export default WellnessForm;
+export default Form;
