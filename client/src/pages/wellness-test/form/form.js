@@ -20,11 +20,7 @@ function Form({ setFormValues }) {
   };
 
   return (
-    <div className={styles.container}>
-      <p className={styles.subtitle}>
-        Let&apos;s find out your{" "}
-        <span className={styles.semibold}>financial wellness score.</span>
-      </p>
+    <>
       <form className={styles.formContainer} onSubmit={handleFormSubmit}>
         <div className={styles.formHeader}>
           <div>
@@ -63,7 +59,7 @@ function Form({ setFormValues }) {
 
         <Button classes={{ button: styles.button }}>Continue</Button>
       </form>
-    </div>
+    </>
   );
 }
 

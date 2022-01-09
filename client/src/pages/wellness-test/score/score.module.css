@@ -1,26 +1,6 @@
 @value v-blueGray400, v-blueGray900, v-brandColorPrimary, v-neutralWhite from 'theme/palette.css';
 @value b-desktop from 'theme/breakpoints.css';
 
-.subtitle {
-  color: v-brandColorPrimary;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: center;
-}
-
-.semibold {
-  font-weight: 600;
-}
-
-.container {
-  width: 544px;
-  max-width: 100%;
-  text-align: center;
-  background-color: v-neutralWhite;
-  padding: 16px;
-  margin: 24px auto;
-}
-
 .resultContainer {
   display: flex;
   flex-direction: column;
@@ -44,7 +24,7 @@
 }
 
 .headingSmall {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -56,6 +36,10 @@
   color: v-blueGray400;
 }
 
+.semibold {
+  font-weight: 600;
+}
+
 .button {
   color: v-brandColorPrimary;
   background-color: v-neutralWhite;
@@ -63,14 +47,6 @@
 }
 
 @media b-desktop {
-  .subtitle {
-    text-align: left;
-  }
-
-  .container {
-    padding: 32px;
-  }
-
   .header {
     flex-direction: row;
     text-align: left;

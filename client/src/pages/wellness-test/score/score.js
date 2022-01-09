@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, HealthBar, LoadingSpinner } from "lib/components";
 import { wellnessScores } from "lib/constants";
+import PropTypes from "prop-types";
 import { apiGet } from "services";
 
 import styles from "./score.module.css";
@@ -19,38 +20,40 @@ function Score({ formValues, onReturn }) {
 
   return (
     <>
-      <p className={styles.subtitle}>
-        Here&apos;s your{" "}
-        <span className={styles.semibold}>financial wellness score</span>:
-      </p>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <img src={logoCircle} alt='' />
-        </div>
-        <div className={styles.resultContainer}>
-          {scoreData ? (
-            <>
-              <HealthBar level={scoreData.level} />
-
-              <div className={styles.message}>
-                <h1 className={styles.headingSmall}>{scoreData.message}</h1>
-                <p className={styles.paragraph}>
-                  Your financial wellness score is{" "}
-                  <span className={styles.semibold}>{scoreData.title}</span>.
-                </p>
-              </div>
-            </>
-          ) : (
-            <LoadingSpinner />
-          )}
-        </div>
-
-        <Button classes={{ button: styles.button }} onClick={onReturn}>
-          Return
-        </Button>
+      <div className={styles.header}>
+        <img src={logoCircle} alt='' />
       </div>
+      <div className={styles.resultContainer}>
+        {scoreData ? (
+          <>
+            <HealthBar level={scoreData.level} />
+
+            <div className={styles.message}>
+              <h1 className={styles.headingSmall}>{scoreData.message}</h1>
+              <p className={styles.paragraph}>
+                Your financial wellness score is{" "}
+                <span className={styles.semibold}>{scoreData.title}</span>.
+              </p>
+            </div>
+          </>
+        ) : (
+          <LoadingSpinner />
+        )}
+      </div>
+
+      <Button classes={{ button: styles.button }} onClick={onReturn}>
+        Return
+      </Button>
     </>
   );
 }
+
+Score.propTypes = {
+  formValues: PropTypes.shape({
+    annualIncome: PropTypes.number.isRequired,
+    monthlyCosts: PropTypes.number.isRequired,
+  }).isRequired,
+  onReturn: PropTypes.func.isRequired,
+};
 
 export default Score;

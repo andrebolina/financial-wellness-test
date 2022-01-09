@@ -17,11 +17,18 @@ function WellnessTest() {
     <>
       <Header />
       <div className={styles.wrapper}>
-        {!formValues ? (
-          <Form setFormValues={setFormValues} />
-        ) : (
-          <Score onReturn={resetForm} formValues={formValues} />
-        )}
+        <p className={styles.subtitle}>
+          {!formValues ? "Let's find out your " : "Here's your "}
+          <span className={styles.semibold}>financial wellness score</span>
+          {!formValues ? "." : ":"}
+        </p>
+        <div className={styles.container}>
+          {!formValues ? (
+            <Form setFormValues={setFormValues} />
+          ) : (
+            <Score onReturn={resetForm} formValues={formValues} />
+          )}
+        </div>
       </div>
       <Footer />
     </>
