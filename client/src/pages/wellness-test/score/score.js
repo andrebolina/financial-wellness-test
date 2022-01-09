@@ -13,7 +13,7 @@ function Score({ formValues, onReturn }) {
   const { annualIncome, monthlyCosts } = formValues;
 
   useEffect(() => {
-    apiGet(`wellness/${annualIncome}/${monthlyCosts}/score`).then(response => {
+    apiGet(`wellness/${annualIncome}/${monthlyCosts}`).then(response => {
       setScoreData(wellnessScores[response.score]);
     });
   }, [annualIncome, monthlyCosts]);

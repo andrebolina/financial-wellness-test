@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask.views import MethodView
 
-from api.schema.wellness import wellness_score_schema
+from api.schema.wellness_schema import WellnessScoreSchema
 from services.wellness_service import calculate_wellness_score
 
 blueprint = Blueprint(
@@ -9,7 +9,10 @@ blueprint = Blueprint(
   __name__
 )
 
-@blueprint.route("/<annual_income>/<monthly_costs>/score", methods=['GET'])
+@blueprint.route("/<annual_income>/<monthly_costs>", methods=['GET'])
 def wellness_score(annual_income, monthly_costs):
-  score = calculate_wellness_score(annual_income, monthly_costs)
-  return wellness_score_schema.dump({'score': score})
+  response_schema = WellnessScoreSchema()
+
+  wellness_score = calculate_wellness_score(annual_income, monthly_costs)
+  
+  return response_schema.dump({'score': wellness_score})
