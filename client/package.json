@@ -28,9 +28,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "coverage": "npm test -- --coverage .",
-    "format": "prettier --write \"src/**/*.{js,css}\"",
-    "lint": "eslint \"src/**/*.{js,css}\" --quiet",
-    "lint:fix": "eslint \"src/**/*.{js,css}\" --fix"
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
   },
   "eslintConfig": {
     "extends": [
