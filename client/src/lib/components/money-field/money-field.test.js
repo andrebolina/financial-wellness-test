@@ -25,8 +25,10 @@ describe("MoneyField", () => {
       />
     );
 
-    expect(screen.getByText("Test Label")).toBeInTheDocument();
-    expect(screen.getByRole("textbox").getAttribute("placeholder")).toBe("0");
+    const input = screen.getByRole("textbox");
+    expect(input).toHaveClass("error");
+    expect(input.getAttribute("placeholder")).toBe("0");
+    expect(screen.getByText("Test Label")).toHaveClass("error");
     expect(screen.getByText("Test Error")).toBeInTheDocument();
   });
 
