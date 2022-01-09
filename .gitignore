@@ -22,4 +22,9 @@
 /*/yarn-debug.log*
 /*/yarn-error.log*
 
-.vscode/
+# pytest
+__pycache__
+.coverage
+
+# Visual Studio Code configs
+.vscode

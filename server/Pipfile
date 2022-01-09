@@ -7,9 +7,10 @@ name = "pypi"
 flask = "*"
 flask-cors = "*"
 flask-marshmallow = "*"
-pytest = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.10"
