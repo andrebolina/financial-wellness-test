@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
+
 import styles from "./loading-spinner.module.css";
 
-function LoadingSpinner({ size = 50 }) {
+function LoadingSpinner({ size }) {
   return (
     <span
       data-testid='loading-spinner'
@@ -9,5 +11,13 @@ function LoadingSpinner({ size = 50 }) {
     />
   );
 }
+
+LoadingSpinner.propTypes = {
+  size: PropTypes.number,
+};
+
+LoadingSpinner.defaultProps = {
+  size: 50,
+};
 
 export default LoadingSpinner;
