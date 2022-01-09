@@ -1,11 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 
-import Header from './header';
+import Header from "./header";
 
 describe("Header", () => {
-  it('should render', () => {
+  it("should render", () => {
     render(<Header />);
 
-    expect(screen.getByAltText('Origin Logo')).toBeInTheDocument();
-  })
-})
+    expect(screen.getByAltText("Origin Logo")).toBeInTheDocument();
+  });
+});

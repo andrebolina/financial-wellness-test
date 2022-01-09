@@ -1,1 +1,1 @@
-export * from './wellness-scores';
+export * from "./wellness-scores";

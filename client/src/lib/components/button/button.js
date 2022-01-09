@@ -1,22 +1,27 @@
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import styles from './button.module.css';
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import styles from "./button.module.css";
 
 function Button({ children, classes, onClick }) {
   return (
-    <button className={classNames(styles.button, classes.button)} onClick={onClick}>{children}</button>
+    <button
+      className={classNames(styles.button, classes.button)}
+      onClick={onClick}
+    >
+      {children}
+    </button>
   );
 }
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   classes: PropTypes.object,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   classes: {},
-  onClick: () => { }
-}
+  onClick: () => {},
+};
 
 export default Button;

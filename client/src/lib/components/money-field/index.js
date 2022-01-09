@@ -1,1 +1,1 @@
-export { default } from './money-field'
+export { default } from "./money-field";

@@ -1,1 +1,1 @@
-export { default } from './wellness-test';
+export { default } from "./wellness-test";

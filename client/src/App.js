@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import WellnessTest from 'pages/wellness-test';
+import WellnessTest from "pages/wellness-test";
 
 function App() {
   return (

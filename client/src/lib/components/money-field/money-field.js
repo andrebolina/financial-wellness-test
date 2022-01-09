@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import { useState } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import { formatMoneyValue, formatNumberValue } from 'lib/utils';
+import { formatMoneyValue, formatNumberValue } from "lib/utils";
 
-import styles from './money-field.module.css';
+import styles from "./money-field.module.css";
 
 function MoneyField({ errorMessage, label, onChange, placeholder }) {
   const [value, setValue] = useState("");
@@ -15,13 +15,26 @@ function MoneyField({ errorMessage, label, onChange, placeholder }) {
 
     setValue(moneyValue);
     onChange(numberValue);
-  }
+  };
 
   return (
     <div className={styles.container}>
-      {label ? <label className={classNames(styles.label, { [styles.error]: errorMessage })}>{label}</label> : null}
-      <input placeholder={placeholder} className={classNames(styles.input, { [styles.error]: errorMessage })} value={value} onChange={handleOnChange} />
-      {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
+      {label ? (
+        <label
+          className={classNames(styles.label, { [styles.error]: errorMessage })}
+        >
+          {label}
+        </label>
+      ) : null}
+      <input
+        placeholder={placeholder}
+        className={classNames(styles.input, { [styles.error]: errorMessage })}
+        value={value}
+        onChange={handleOnChange}
+      />
+      {errorMessage ? (
+        <p className={styles.errorMessage}>{errorMessage}</p>
+      ) : null}
     </div>
   );
 }
@@ -30,7 +43,7 @@ MoneyField.propTypes = {
   errorMessage: PropTypes.string,
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
 };
 
 export default MoneyField;

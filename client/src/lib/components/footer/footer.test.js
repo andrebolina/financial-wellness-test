@@ -1,11 +1,15 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 
-import Footer from './footer';
+import Footer from "./footer";
 
 describe("Footer", () => {
-  it('should render', () => {
+  it("should render", () => {
     render(<Footer />);
 
-    expect(screen.getByText('Your financial information is encrypted and secure. We\'ll never share or sell any of your personal data.')).toBeInTheDocument();
-  })
-})
+    expect(
+      screen.getByText(
+        "Your financial information is encrypted and secure. We'll never share or sell any of your personal data."
+      )
+    ).toBeInTheDocument();
+  });
+});
