@@ -5,8 +5,8 @@ export const apiGet = (resource, options = {}) => {
     ...options,
     method: "GET",
   })
-    .then((resp) => resp.json())
-    .catch((err) =>
+    .then(resp => resp.json())
+    .catch(err =>
       console.log(
         `API has been a has been a problem with your GET operation: ${err}`
       )
@@ -18,8 +18,8 @@ export const apiPost = (resource, options = {}) => {
     ...options,
     method: "POST",
   })
-    .then((resp) => resp.json())
-    .catch((err) =>
+    .then(resp => resp.json())
+    .catch(err =>
       console.log(
         `API has been a has been a problem with your POST operation: ${err}`
       )

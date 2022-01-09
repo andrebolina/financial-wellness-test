@@ -4,10 +4,7 @@ import styles from "./button.module.css";
 
 function Button({ children, classes, onClick }) {
   return (
-    <button
-      className={classNames(styles.button, classes.button)}
-      onClick={onClick}
-    >
+    <button className={classNames(styles.button, classes.button)} onClick={onClick}>
       {children}
     </button>
   );

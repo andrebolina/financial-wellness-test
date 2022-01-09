@@ -13,7 +13,7 @@ function Score({ formValues, onReturn }) {
   useEffect(() => {
     apiGet(
       `wellness/${formValues.annualIncome}/${formValues.monthlyCosts}/score`
-    ).then((response) => {
+    ).then(response => {
       setScoreData(wellnessScores[response.score] || 0);
     });
   }, []);
@@ -26,7 +26,7 @@ function Score({ formValues, onReturn }) {
       </p>
       <div className={styles.container}>
         <div className={styles.header}>
-          <img src={logoCircle} alt="" />
+          <img src={logoCircle} alt='' />
         </div>
         <div className={styles.resultContainer}>
           {scoreData ? (

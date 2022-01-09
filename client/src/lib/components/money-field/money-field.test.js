@@ -18,10 +18,10 @@ describe("MoneyField", () => {
   it("should render with all props", () => {
     render(
       <MoneyField
-        errorMessage="Test Error"
-        label="Test Label"
+        errorMessage='Test Error'
+        label='Test Label'
         onChange={mockOnChange}
-        placeholder="0"
+        placeholder='0'
       />
     );
 
@@ -32,7 +32,7 @@ describe("MoneyField", () => {
 
   it("should call onChange", () => {
     render(
-      <MoneyField label="Test Label" onChange={mockOnChange} placeholder="0" />
+      <MoneyField label='Test Label' onChange={mockOnChange} placeholder='0' />
     );
 
     const input = screen.getByRole("textbox");

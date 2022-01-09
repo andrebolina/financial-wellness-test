@@ -9,7 +9,7 @@ import styles from "./money-field.module.css";
 function MoneyField({ errorMessage, label, onChange, placeholder }) {
   const [value, setValue] = useState("");
 
-  const handleOnChange = (e) => {
+  const handleOnChange = e => {
     const moneyValue = formatMoneyValue(e.target.value);
     const numberValue = formatNumberValue(e.target.value);
 
@@ -32,9 +32,7 @@ function MoneyField({ errorMessage, label, onChange, placeholder }) {
         value={value}
         onChange={handleOnChange}
       />
-      {errorMessage ? (
-        <p className={styles.errorMessage}>{errorMessage}</p>
-      ) : null}
+      {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
     </div>
   );
 }

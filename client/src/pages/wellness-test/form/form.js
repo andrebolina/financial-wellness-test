@@ -10,7 +10,7 @@ function Form({ setFormValues }) {
   const [annualIncome, setAnnualIncome] = useState(null);
   const [monthlyCosts, setMonthlyCosts] = useState(null);
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = e => {
     e.preventDefault();
     setHasSubmittedOnce(true);
 
@@ -28,7 +28,7 @@ function Form({ setFormValues }) {
       <form className={styles.formContainer} onSubmit={handleFormSubmit}>
         <div className={styles.formHeader}>
           <div>
-            <img src={logoCircle} alt="" />
+            <img src={logoCircle} alt='' />
           </div>
           <div className={styles.formTitle}>
             <h1 className={styles.headingSmall}>Financial wellness test</h1>
@@ -44,9 +44,9 @@ function Form({ setFormValues }) {
               errorMessage={
                 hasSubmittedOnce && !annualIncome ? "Invalid Value" : null
               }
-              label="Annual income"
+              label='Annual income'
               onChange={setAnnualIncome}
-              placeholder="0"
+              placeholder='0'
             />
           </div>
           <div className={styles.inputContainer}>
@@ -54,9 +54,9 @@ function Form({ setFormValues }) {
               errorMessage={
                 hasSubmittedOnce && !monthlyCosts ? "Invalid Value" : null
               }
-              label="Monthly Costs"
+              label='Monthly Costs'
               onChange={setMonthlyCosts}
-              placeholder="0"
+              placeholder='0'
             />
           </div>
         </div>

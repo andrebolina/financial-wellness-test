@@ -4,9 +4,9 @@ import logo from "assets/images/brand/origin-logo.png";
 
 function Header() {
   return (
-    <header id="main-header" className={styles.header}>
+    <header id='main-header' className={styles.header}>
       <div className={styles.content}>
-        <img src={logo} alt="Origin Logo" />
+        <img src={logo} alt='Origin Logo' />
       </div>
     </header>
   );

@@ -1,4 +1,4 @@
-export const formatMoneyValue = (value) => {
+export const formatMoneyValue = value => {
   const numberValue = parseInt(value.replace(/,/g, ""));
 
   return numberValue
@@ -8,6 +8,6 @@ export const formatMoneyValue = (value) => {
     : "";
 };
 
-export const formatNumberValue = (value) => {
+export const formatNumberValue = value => {
   return parseInt(value.replace(/,/g, "")) || 0;
 };
