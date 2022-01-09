@@ -1,5 +1,6 @@
-import PropTypes from "prop-types";
 import classNames from "classnames";
+import PropTypes from "prop-types";
+
 import styles from "./button.module.css";
 
 function Button({ children, classes, onClick }) {

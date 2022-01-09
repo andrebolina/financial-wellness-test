@@ -1,8 +1,7 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
-
 import { formatMoneyValue, formatNumberValue } from "lib/utils";
+import PropTypes from "prop-types";
 
 import styles from "./money-field.module.css";
 

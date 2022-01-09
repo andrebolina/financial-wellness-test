@@ -3,20 +3,19 @@ import { Button, HealthBar, LoadingSpinner } from "lib/components";
 import { wellnessScores } from "lib/constants";
 import { apiGet } from "services";
 
-import logoCircle from "assets/images/brand/origin-circle.png";
-
 import styles from "./score.module.css";
+
+import logoCircle from "assets/images/brand/origin-circle.png";
 
 function Score({ formValues, onReturn }) {
   const [scoreData, setScoreData] = useState(null);
+  const { annualIncome, monthlyCosts } = formValues;
 
   useEffect(() => {
-    apiGet(
-      `wellness/${formValues.annualIncome}/${formValues.monthlyCosts}/score`
-    ).then(response => {
+    apiGet(`wellness/${annualIncome}/${monthlyCosts}/score`).then(response => {
       setScoreData(wellnessScores[response.score] || 0);
     });
-  }, []);
+  }, [annualIncome, monthlyCosts]);
 
   return (
     <>

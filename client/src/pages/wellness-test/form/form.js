@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button, MoneyField } from "lib/components";
 
-import logoCircle from "assets/images/brand/origin-circle.png";
-
 import styles from "./form.module.css";
+
+import logoCircle from "assets/images/brand/origin-circle.png";
 
 function Form({ setFormValues }) {
   const [hasSubmittedOnce, setHasSubmittedOnce] = useState(false);
