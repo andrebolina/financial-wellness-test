@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, MoneyField } from "lib/components";
+import PropTypes from "prop-types";
 
 import styles from "./form.module.css";
 
@@ -62,5 +63,9 @@ function Form({ setFormValues }) {
     </>
   );
 }
+
+Form.propTypes = {
+  setFormValues: PropTypes.func.isRequired,
+};
 
 export default Form;
