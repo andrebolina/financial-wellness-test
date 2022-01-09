@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button, HealthBar, LoadingSpinner } from 'lib/components';
 import { wellnessScores } from 'lib/constants';
+import { apiGet } from 'services'
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 
@@ -10,8 +11,8 @@ function Score({ formValues, onReturn }) {
   const [scoreData, setScoreData] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/wellness/${formValues.annualIncome}/${formValues.monthlyCosts}/score`)
-      .then(res => res.json()).then(response => {
+    apiGet(`wellness/${formValues.annualIncome}/${formValues.monthlyCosts}/score`)
+      .then(response => {
         setScoreData(wellnessScores[response.score] || 0);
       });
   }, []);
