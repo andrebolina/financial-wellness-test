@@ -2,12 +2,7 @@
 @value b-desktop from 'theme/breakpoints.css';
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 24px 16px;
+  width: 100%;
 }
 
 .subtitle {
@@ -67,38 +62,13 @@
   margin-bottom: 16px;
 }
 
-.primaryButton {
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-
-  width: 320px;
-  max-width: 100%;
-  height: 56px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  color: v-neutralWhite;
-
-  background-color: v-brandColorPrimary;
+.button {
   border: none;
-  border-radius: 32px;
+  color: v-neutralWhite;
+  background-color: v-brandColorPrimary;  
 }
 
 @media b-desktop {
-  .container {
-    min-height: calc(100vh - 166px);
-  }
-
-  .subtitle {
-    text-align: left;
-  }
-
   .formContainer {
     padding: 32px;
   }

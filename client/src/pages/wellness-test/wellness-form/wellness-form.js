@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MoneyField } from 'lib/components';
+import { Button, MoneyField } from 'lib/components';
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 
@@ -38,11 +38,11 @@ function WellnessForm({ setFormValues }) {
             <MoneyField errorMessage={hasSubmittedOnce && !annualIncome ? 'Invalid Value' : null} label="Annual income" onChange={setAnnualIncome} placeholder='0' />
           </div>
           <div className={styles.inputContainer}>
-            <MoneyField errorMessage={hasSubmittedOnce && !annualIncome ? 'Invalid Value' : null} label="Monthly Costs" onChange={setMonthlyCosts} placeholder='0' />
+            <MoneyField errorMessage={hasSubmittedOnce && !monthlyCosts ? 'Invalid Value' : null} label="Monthly Costs" onChange={setMonthlyCosts} placeholder='0' />
           </div>
         </div>
 
-        <button className={styles.primaryButton}>Continue</button>
+        <Button classes={{ button: styles.button }}>Continue</Button>
       </form>
     </div>
   );
