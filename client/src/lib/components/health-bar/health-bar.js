@@ -7,6 +7,7 @@ function HealthBar({ level }) {
   return (
     <div className={styles.container}>
       <span
+        data-testid='level-1'
         className={classNames(styles.level, {
           [styles.healthy]: level === 3,
           [styles.medium]: level === 2,
@@ -14,12 +15,14 @@ function HealthBar({ level }) {
         })}
       />
       <span
+        data-testid='level-2'
         className={classNames(styles.level, {
           [styles.healthy]: level === 3,
           [styles.medium]: level === 2,
         })}
       />
       <span
+        data-testid='level-3'
         className={classNames(styles.level, { [styles.healthy]: level === 3 })}
       />
     </div>

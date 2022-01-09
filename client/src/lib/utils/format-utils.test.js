@@ -1,4 +1,4 @@
-import { formatMoneyValue } from "./format-utils";
+import { formatMoneyValue, formatNumberValue } from "./format-utils";
 
 describe("Format Utils", () => {
   describe("formatMoneyValue", () => {
@@ -18,6 +18,25 @@ describe("Format Utils", () => {
     it("formats invalid values", () => {
       expect(formatMoneyValue("")).toBe("");
       expect(formatMoneyValue("a")).toBe("");
+    });
+  });
+
+  describe("formatNumberValue", () => {
+    it("formats valid values", () => {
+      expect(formatNumberValue("9")).toBe(9);
+      expect(formatNumberValue("9a")).toBe(9);
+      expect(formatNumberValue("9.")).toBe(9);
+      expect(formatNumberValue("99")).toBe(99);
+      expect(formatNumberValue("999")).toBe(999);
+      expect(formatNumberValue("9,999")).toBe(9999);
+      expect(formatNumberValue("99,999")).toBe(99999);
+      expect(formatNumberValue("999,999")).toBe(999999);
+      expect(formatNumberValue("9,999,999")).toBe(9999999);
+    });
+
+    it("formats invalid values", () => {
+      expect(formatNumberValue("")).toBe(0);
+      expect(formatNumberValue("a")).toBe(0);
     });
   });
 });
