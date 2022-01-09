@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { formatMoneyValue } from 'lib/utils';
+import { formatMoneyValue, formatNumberValue } from 'lib/utils';
 
 import styles from './money-field.module.css';
 
@@ -10,10 +10,11 @@ function MoneyField({ errorMessage, label, onChange, placeholder }) {
   const [value, setValue] = useState("");
 
   const handleOnChange = (e) => {
-    const formattedValue = formatMoneyValue(e.target.value);
+    const moneyValue = formatMoneyValue(e.target.value);
+    const numberValue = formatNumberValue(e.target.value);
 
-    setValue(formattedValue);
-    onChange(formattedValue);
+    setValue(moneyValue);
+    onChange(numberValue);
   }
 
   return (

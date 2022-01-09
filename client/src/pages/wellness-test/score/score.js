@@ -1,11 +1,20 @@
+import { useEffect, useState } from 'react';
 import { Button, HealthBar } from 'lib/components';
+import { wellnessLevel } from 'lib/constants';
 
 import logoCircle from 'assets/images/brand/origin-circle.png';
 
 import styles from './score.module.css';
 
 function Score({ formValues, onReturn }) {
-  console.log(formValues);
+  const [scoreLevel, setScoreLevel] = useState(null);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/wellness/${formValues.annualIncome}/${formValues.monthlyCosts}/score`)
+      .then(res => res.json()).then(response => {
+        setScoreLevel(wellnessLevel[response.score] || 0);
+      });
+  }, []);
 
   return (
     <>
@@ -15,7 +24,7 @@ function Score({ formValues, onReturn }) {
           <img src={logoCircle} alt="" />
         </div>
 
-        <HealthBar level={1} />
+        {scoreLevel ? <HealthBar level={scoreLevel} /> : 'Loading'}
 
         <div className={styles.resultMessage}>
           <h1 className={styles.headingSmall}>Congratulations!</h1>
