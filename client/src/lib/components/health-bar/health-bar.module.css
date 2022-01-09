@@ -1,4 +1,4 @@
-@value v-green500, v-neutralWhite, v-red700, v-sun700 from 'theme/palette.css';
+@value v-blueGray50, v-green500, v-neutralWhite, v-red700, v-sun700 from 'theme/palette.css';
 @value b-desktop from 'theme/breakpoints.css';
 
 .container {
@@ -12,7 +12,7 @@
   height: 100%;
   border: 2px solid v-neutralWhite;
   border-radius: 24px;
-  background-color: #E9EEF2;
+  background-color: v-blueGray50;
 }
 
 .level:nth-of-type(1) {
