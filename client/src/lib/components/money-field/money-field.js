@@ -18,19 +18,21 @@ function MoneyField({ errorMessage, label, onChange, placeholder }) {
 
   return (
     <div className={styles.container}>
-      {label ? (
-        <label
-          className={classNames(styles.label, { [styles.error]: errorMessage })}
-        >
-          {label}
-        </label>
-      ) : null}
-      <input
-        placeholder={placeholder}
-        className={classNames(styles.input, { [styles.error]: errorMessage })}
-        value={value}
-        onChange={handleOnChange}
-      />
+      <label>
+        {label ? (
+          <div
+            className={classNames(styles.label, { [styles.error]: errorMessage })}
+          >
+            {label}
+          </div>
+        ) : null}
+        <input
+          placeholder={placeholder}
+          className={classNames(styles.input, { [styles.error]: errorMessage })}
+          value={value}
+          onChange={handleOnChange}
+        />
+      </label>
       {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
     </div>
   );

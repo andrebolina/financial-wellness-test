@@ -11,7 +11,7 @@ describe("LoadingSpinner", () => {
   });
 
   it("should render with custom props", () => {
-    render(<LoadingSpinner size='60' />);
+    render(<LoadingSpinner size={60} />);
     expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
     expect(screen.getByTestId("loading-spinner")).toHaveStyle("width: 60px");
     expect(screen.getByTestId("loading-spinner")).toHaveStyle("height: 60px");

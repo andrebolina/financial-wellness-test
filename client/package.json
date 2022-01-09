@@ -54,8 +54,7 @@
     "collectCoverageFrom": [
       "src/lib/**/*.js",
       "!src/lib/constants/*.js",
-      "src/pages/**/*.js",
-      "src/services/**/*.js"
+      "src/pages/**/*.js"
     ]
   }
 }
