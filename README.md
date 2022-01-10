@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Financial Wellness Test - André Bolina implementation of Origin Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a implementation of the [take-home assignment](https://useorigin.notion.site/THA-Web-Interface-API-application-4819947101684706b984f04e9aef9294) for the <em>Fullstack Software Engineer | Investment's Team role</em> at <a href="https://www.useorigin.com)">Origin</a>.
 
 ## Available Scripts
 
