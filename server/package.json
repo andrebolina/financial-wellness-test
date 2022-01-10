@@ -4,7 +4,7 @@
   "scripts": {
     "setup": "pipenv install --dev",
     "start": "pipenv run python src/app.py",
-    "test": "pipenv run python -m pytest tests/",
-    "coverage": "pipenv run python -m pytest --cov"
+    "test": "cd src & pipenv run python -m pytest ../tests",
+    "coverage": "cd src & pipenv run python -m pytest ../tests --cov"
   }
 }

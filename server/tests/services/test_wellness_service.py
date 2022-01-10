@@ -1,9 +1,8 @@
-import sys
-import os
-myPath = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, myPath + '/../../src/')
-
-from utils.constants.wellness_constants import LOW_SCORE
+from utils.constants.wellness_constants import (
+    LOW_SCORE,
+    MEDIUM_SCORE,
+    HEALTHY_SCORE
+)
 from services.wellness_service import calculate_wellness_score
 
 
@@ -12,7 +11,7 @@ class TestWellnessService():
         assert calculate_wellness_score(1000, 80) == LOW_SCORE
 
     def test_calculate_wellness_score_medium_result(self):
-        assert calculate_wellness_score(1000, 30) == 'MEDIUM'
+        assert calculate_wellness_score(1000, 30) == MEDIUM_SCORE
 
     def test_calculate_wellness_score_healthy_result(self):
-        assert calculate_wellness_score(1000, 10) == 'HEALTHY'
+        assert calculate_wellness_score(1000, 10) == HEALTHY_SCORE
