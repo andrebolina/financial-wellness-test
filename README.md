@@ -1,70 +1,65 @@
-# Financial Wellness Test - André Bolina implementation of Origin Challenge
+# Financial Wellness Test - André Bolina implementation of an Origin THA
 
-This project is a implementation of the [take-home assignment](https://useorigin.notion.site/THA-Web-Interface-API-application-4819947101684706b984f04e9aef9294) for the <em>Fullstack Software Engineer | Investment's Team role</em> at <a href="https://www.useorigin.com)">Origin</a>.
+This project is the <a href="https://www.bolina.dev">André Bolina</a> implementation of the take-home assignment for the <em>Fullstack Software Engineer | Investment's Team role</em> at <a href="https://www.useorigin.com">Origin</a>.
 
-## Available Scripts
+The THA is to create a web interface and an API application for a financial wellness test based on user's input for his annual gross income and average monthly costs. <a href="https://useorigin.notion.site/THA-Web-Interface-API-application-4819947101684706b984f04e9aef9294">Click here</a> to access the fully THA doc.
 
-In the project directory, you can run:
+<br>
+
+## Technology Stack
+The technology stack to use wasn't a requirement of the THA. I've decided to use Python + React, since it's has been my day to day stack at least for the past year.
+
+<br>
+
+## API
+
+### Requirements
+In order to run the API you should have Python, PIP and Pipenv installed. All commands bellow are suppossed to be runned into `server` folder and requires npm installed*.
+
+<em>* You can check the final scripts into <strong>server/packages.json</strong> to execute them without npm.</em>
+### `npm run setup`
+Create a virtual environment for the project and install all dependencies, including dev ones.
 
 ### `npm start`
+Runs the flask api in the development mode.\
+The API will run on <a href="http://localhost:5000">http://localhost:5000</a>.
 
+### `npm test`
+Runs the unit tests.
+
+### `npm run coverage`
+Runs the unit tests coverage.
+
+<br>
+
+## Web Interface
+
+### Requirements
+In order to run the Web Interface you should have Node.js and npm installed. All commands bellow are suppossed to be runned into `client` folder.
+
+### `npm start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
-
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm test`
+Launches the test runner in the interactive watch mode.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run coverage`
+Launches the test runner with coverage results in the interactive watch mode.
 
-### `npm run eject`
+### `npm run format`
+Format js, jsx, and css project files according to prettier config.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `npm run lint`
+Check js and jsx project files according to Eslint config.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `npm run lint:fix`
+Format js and jsx project files according to to Eslint config.
