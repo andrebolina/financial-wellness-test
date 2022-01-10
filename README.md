@@ -4,15 +4,10 @@ This project is the <a href="https://www.bolina.dev">André Bolina</a> implement
 
 The THA is to create a web interface and an API application for a financial wellness test based on user's input for his annual gross income and average monthly costs. <a href="https://useorigin.notion.site/THA-Web-Interface-API-application-4819947101684706b984f04e9aef9294">Click here</a> to access the fully THA doc.
 
-<br>
-
 ## Technology Stack
 The technology stack to use wasn't a requirement of the THA. I've decided to use Python + React, since it's has been my day to day stack at least for the past year.
 
-<br>
-
 ## API
-
 ### Requirements
 In order to run the API you should have Python, PIP and Pipenv installed. All commands bellow are suppossed to be runned into `server` folder and requires npm installed*.
 
@@ -30,10 +25,7 @@ Runs the unit tests.
 ### `npm run coverage`
 Runs the unit tests coverage.
 
-<br>
-
 ## Web Interface
-
 ### Requirements
 In order to run the Web Interface you should have Node.js and npm installed. All commands bellow are suppossed to be runned into `client` folder.
 
