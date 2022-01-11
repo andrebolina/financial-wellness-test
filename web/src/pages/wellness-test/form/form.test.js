@@ -24,7 +24,7 @@ describe("Form", () => {
 
     fireEvent.click(screen.getByRole("button", { name: "Continue" }));
 
-    expect(screen.queryAllByText("Invalid Value")).toHaveLength(2);
+    expect(screen.queryAllByText("The value must be greater than 0")).toHaveLength(2);
     expect(mockSetFormValues).not.toHaveBeenCalled();
   });
 

@@ -1,4 +1,4 @@
-@value v-blueGray50, v-bluegray100, v-blueGray600, v-red700 from 'theme/palette.css';
+@value v-blueGray50, v-bluegray100, v-blueGray600, v-blueGray900, v-red700 from 'theme/palette.css';
 
 .container {
   display: flex;
@@ -6,7 +6,7 @@
 }
 
 .label {
-  color: v-blueGray600;
+  color: v-blueGray900;
   text-align: left;
   line-height: 21px;
   margin-bottom: 4px;

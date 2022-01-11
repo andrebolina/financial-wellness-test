@@ -39,7 +39,7 @@ function Form({ setFormValues }) {
           <div className={styles.inputContainer}>
             <MoneyField
               errorMessage={
-                hasSubmittedOnce && !annualIncome ? "Invalid Value" : null
+                hasSubmittedOnce && !annualIncome ? "The value must be greater than 0" : null
               }
               label='Annual income'
               onChange={setAnnualIncome}
@@ -49,7 +49,7 @@ function Form({ setFormValues }) {
           <div className={styles.inputContainer}>
             <MoneyField
               errorMessage={
-                hasSubmittedOnce && !monthlyCosts ? "Invalid Value" : null
+                hasSubmittedOnce && !monthlyCosts ? "The value must be greater than 0" : null
               }
               label='Monthly Costs'
               onChange={setMonthlyCosts}

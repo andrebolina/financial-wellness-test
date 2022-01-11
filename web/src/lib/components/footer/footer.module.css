@@ -2,12 +2,13 @@
 @value b-desktop from 'theme/breakpoints.css';
 
 .content {
+  height: 116px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 11px 16px;
+  padding: 0 16px 16px;
 }
 
 .icon {
@@ -23,6 +24,7 @@
     height: 54px;
     flex-direction: row;
     text-align: left;
+    padding-bottom: 0;
   }
 
   .icon {

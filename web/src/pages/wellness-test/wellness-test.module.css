@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 24px 16px;
+  padding: 24px 16px 0;
 }
 
 .subtitle {
@@ -32,7 +32,8 @@
 
 @media b-desktop {
   .wrapper {
-    min-height: calc(100vh - 166px);
+    min-height: calc(100vh - 164px);
+    padding-bottom: 24px;
   }
 
   .subtitle {
