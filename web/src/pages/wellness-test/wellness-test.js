@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Footer, Header } from "lib/components";
 
-import Context from './context';
+import Context from "./context";
 import Form from "./form";
 import Score from "./score";
 
@@ -19,13 +19,7 @@ function WellnessTest() {
           <span className={styles.semibold}>financial wellness score</span>
           {!formValues ? "." : ":"}
         </p>
-        <div className={styles.container}>
-          {!formValues ? (
-            <Form />
-          ) : (
-            <Score />
-          )}
-        </div>
+        <div className={styles.container}>{!formValues ? <Form /> : <Score />}</div>
       </div>
       <Footer />
     </Context.Provider>

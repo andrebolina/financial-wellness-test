@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import { Button, MoneyField } from "lib/components";
 
-import Context from '../context';
+import Context from "../context";
 
 import styles from "./form.module.css";
 
 import logoCircle from "assets/images/brand/origin-circle.png";
 function Form() {
-  const [formValues, setFormValues] = useContext(Context);
+  const [, setFormValues] = useContext(Context);
   const [hasSubmittedOnce, setHasSubmittedOnce] = useState(false);
   const [annualIncome, setAnnualIncome] = useState(null);
   const [monthlyCosts, setMonthlyCosts] = useState(null);
@@ -40,7 +40,9 @@ function Form() {
           <div className={styles.inputContainer}>
             <MoneyField
               errorMessage={
-                hasSubmittedOnce && !annualIncome ? "The value must be greater than 0" : null
+                hasSubmittedOnce && !annualIncome
+                  ? "The value must be greater than 0"
+                  : null
               }
               label='Annual income'
               onChange={setAnnualIncome}
@@ -50,7 +52,9 @@ function Form() {
           <div className={styles.inputContainer}>
             <MoneyField
               errorMessage={
-                hasSubmittedOnce && !monthlyCosts ? "The value must be greater than 0" : null
+                hasSubmittedOnce && !monthlyCosts
+                  ? "The value must be greater than 0"
+                  : null
               }
               label='Monthly Costs'
               onChange={setMonthlyCosts}

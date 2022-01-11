@@ -3,7 +3,7 @@ import { Button, HealthBar, LoadingSpinner } from "lib/components";
 import { wellnessScores } from "lib/constants";
 import { apiGet } from "services";
 
-import Context from '../context';
+import Context from "../context";
 
 import styles from "./score.module.css";
 
@@ -43,7 +43,10 @@ function Score() {
         )}
       </div>
 
-      <Button classes={{ button: styles.button }} onClick={() => setFormValues(null)}>
+      <Button
+        classes={{ button: styles.button }}
+        onClick={() => setFormValues(null)}
+      >
         Return
       </Button>
     </>
