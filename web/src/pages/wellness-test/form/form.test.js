@@ -1,17 +1,20 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 
+import Context from "../context";
 import Form from "./form";
 
 describe("Form", () => {
-  let mockSetFormValues;
+  const mockSetFormValues = jest.fn();
 
   beforeEach(() => {
-    mockSetFormValues = jest.fn();
+    render(
+      <Context.Provider value={[null, mockSetFormValues]}>
+        <Form />
+      </Context.Provider>
+    );
   });
 
   it("should render", () => {
-    render(<Form setFormValues={mockSetFormValues} />);
-
     expect(screen.getByText("Financial wellness test")).toBeInTheDocument();
     expect(
       screen.getByText("Enter your financial information below")
@@ -20,8 +23,6 @@ describe("Form", () => {
   });
 
   it("should render errors", () => {
-    render(<Form setFormValues={mockSetFormValues} />);
-
     fireEvent.click(screen.getByRole("button", { name: "Continue" }));
 
     expect(screen.queryAllByText("The value must be greater than 0")).toHaveLength(
@@ -31,8 +32,6 @@ describe("Form", () => {
   });
 
   it("should call setFormValues", () => {
-    render(<Form setFormValues={mockSetFormValues} />);
-
     fireEvent.change(screen.getByLabelText("Annual income"), {
       target: { value: "1000" },
     });
