@@ -47,7 +47,7 @@ I've decided to use Create React App (CRA) to have a quicker start. Also, since 
 
 Since THA has its UI style, I've decided to create my components instead of using a third-party library (e.g., Material-UI). Otherwise, it would require a lot of classes/styles override in the external library components. I've reached the same result with a smaller bundle creating my components. Besides it, avoiding third-party libraries provides smooth maintenances and makes it easier to incorporate on another project.
 
-*For the form + result components I've thought about use a state management library (e.g., Redux or React Query) or another decided to use component wrapper ...
+For the WellnessTest component, I've decided to use Context since I think it can perfectly handle the current web application state. I think the key point to change to a third-party state management library (e.g., Redux or React Query) would be the necessity of more contexts.
 
 From the dev environment perspective, I've decided to use React Testing Library and Jest for the unit tests and Prettier + Eslint to control the code's format and quality. I've decided to use CSS modules to avoid shared styles side-effects and allow a better files structure organization (all files for a single component live in one place). Also, I've used the theme structure to share styles/UI values and facilitate changes in the future.
 
