@@ -10,7 +10,7 @@ The THA doesn't have a required technology stack for its development. I've decid
 
 ## API
 ### Development notes
-I've decided to use Flask instead of a heavy-weight framework since the THA has only a few requirements and business rules. Flask provides speed and flexibility without complexity. It requires much fewer lines of code for a task like that. Although lightweight, Flask is an extensible solution and would support API growth. I think the key points to change to a heavy-weight framework (e.g., Django) would be requirements for authentication, database connection, and team growth (to keep patterns more straightforward).
+I've decided to use Flask instead of a heavy-weight (e.g., Django) framework since the THA has only a few requirements and business rules. Flask provides speed and flexibility without complexity. It requires much fewer lines of code for a task like that. Although lightweight, Flask is an extensible solution and would support API growth. I think the key points to change to a heavy-weight framework would be requirements for authentication, database connection, and team growth (to keep patterns more straightforward).
 
 Also, I've decided to use Marshmallow since, with a thin integration layer, it provides more control for schemas of the API's requests and response, ensuring the fulfillment of the front-end contracts.
 
@@ -81,6 +81,6 @@ Automatically formats Javascript code to conform to Eslint config.
 
 
 ## Final notes
-The business rules from <a href="https://useorigin.notion.site/THA-Web-Interface-API-application-4819947101684706b984f04e9aef9294">THA doc</a> have a gap. If the annual costs represent precisely 25% of his annual net compensation, it doesn't match any business rule. So, noticing the other rule with the '<strong>less</strong> 'conditions has a '<strong>or equal</strong>' condition too, I've decided to change the first rule for '<strong>If the user annual costs represents less than <u>or equal</u> 25% of his annual net compensation, his score is HEALTHY</strong>'.
+The business rules from <a href="https://useorigin.notion.site/THA-Web-Interface-API-application-4819947101684706b984f04e9aef9294">THA doc</a> have a gap. If the annual costs represent precisely 25% of his annual net compensation, it doesn't match any business rule. So, noticing the other rule with the '<strong>less</strong> 'conditions has a '<strong>or equal</strong>' condition too, I've decided to change the first rule to '<strong>If the user annual costs represents less than <u>or equal</u> 25% of his annual net compensation, his score is HEALTHY</strong>'.
 
 The <a href="https://useorigin.notion.site/THA-Web-Interface-API-application-4819947101684706b984f04e9aef9294">THA doc</a> establishes some validations for the form, but the Figma file doesn't have the UI for validations errors and messages. Therefore, I've repeated the standard error style used in UI components libraries and defined the error message. Also, I've decided to put a placeholder in the inputs and a loading component while API handles the Web Application request, even though these points weren't clear in the Figma file.
