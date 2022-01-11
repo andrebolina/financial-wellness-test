@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { WellnessTestContext } from "contexts";
 import { Footer, Header } from "lib/components";
 
-import Context from "./context";
 import Form from "./form";
 import Score from "./score";
 
@@ -11,7 +11,7 @@ function WellnessTest() {
   const [formValues, setFormValues] = useState(null);
 
   return (
-    <Context.Provider value={[formValues, setFormValues]}>
+    <WellnessTestContext.Provider value={[formValues, setFormValues]}>
       <Header />
       <div className={styles.wrapper}>
         <p className={styles.subtitle}>
@@ -22,7 +22,7 @@ function WellnessTest() {
         <div className={styles.container}>{!formValues ? <Form /> : <Score />}</div>
       </div>
       <Footer />
-    </Context.Provider>
+    </WellnessTestContext.Provider>
   );
 }
 

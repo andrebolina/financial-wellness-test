@@ -1,16 +1,15 @@
 import { useContext, useEffect, useState } from "react";
+import { WellnessTestContext } from "contexts";
 import { Button, HealthBar, LoadingSpinner } from "lib/components";
 import { wellnessScores } from "lib/constants";
 import { apiGet } from "services";
-
-import Context from "../context";
 
 import styles from "./score.module.css";
 
 import logoCircle from "assets/images/brand/origin-circle.png";
 
 function Score() {
-  const [formValues, setFormValues] = useContext(Context);
+  const [formValues, setFormValues] = useContext(WellnessTestContext);
   const [scoreData, setScoreData] = useState(null);
   const { annualIncome, monthlyCosts } = formValues;
 

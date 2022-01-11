@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import { WellnessTestContext } from "contexts";
 
-import Context from "../context";
 import Form from "./form";
 
 describe("Form", () => {
@@ -8,9 +8,9 @@ describe("Form", () => {
 
   beforeEach(() => {
     render(
-      <Context.Provider value={[null, mockSetFormValues]}>
+      <WellnessTestContext.Provider value={[null, mockSetFormValues]}>
         <Form />
-      </Context.Provider>
+      </WellnessTestContext.Provider>
     );
   });
 

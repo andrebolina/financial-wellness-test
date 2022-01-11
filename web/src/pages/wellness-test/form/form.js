@@ -1,13 +1,12 @@
 import { useContext, useState } from "react";
+import { WellnessTestContext } from "contexts";
 import { Button, MoneyField } from "lib/components";
-
-import Context from "../context";
 
 import styles from "./form.module.css";
 
 import logoCircle from "assets/images/brand/origin-circle.png";
 function Form() {
-  const [, setFormValues] = useContext(Context);
+  const [, setFormValues] = useContext(WellnessTestContext);
   const [hasSubmittedOnce, setHasSubmittedOnce] = useState(false);
   const [annualIncome, setAnnualIncome] = useState(null);
   const [monthlyCosts, setMonthlyCosts] = useState(null);

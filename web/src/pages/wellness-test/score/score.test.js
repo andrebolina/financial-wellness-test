@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { WellnessTestContext } from "contexts";
 
-import Context from "../context";
 import Score from "./score";
 
 describe("Score", () => {
@@ -14,9 +14,9 @@ describe("Score", () => {
 
   it("should render", () => {
     render(
-      <Context.Provider value={[mockFormValues, mockSetFormValues]}>
+      <WellnessTestContext.Provider value={[mockFormValues, mockSetFormValues]}>
         <Score />
-      </Context.Provider>
+      </WellnessTestContext.Provider>
     );
 
     expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
@@ -30,9 +30,9 @@ describe("Score", () => {
       })
     );
     render(
-      <Context.Provider value={[mockFormValues, mockSetFormValues]}>
+      <WellnessTestContext.Provider value={[mockFormValues, mockSetFormValues]}>
         <Score />
-      </Context.Provider>
+      </WellnessTestContext.Provider>
     );
     await waitFor(() => {
       expect(screen.getByText("Congratulations!")).toBeInTheDocument();
@@ -45,9 +45,9 @@ describe("Score", () => {
 
   it("should call onReturn", () => {
     render(
-      <Context.Provider value={[mockFormValues, mockSetFormValues]}>
+      <WellnessTestContext.Provider value={[mockFormValues, mockSetFormValues]}>
         <Score />
-      </Context.Provider>
+      </WellnessTestContext.Provider>
     );
 
     const button = screen.getByRole("button", { name: "Return" });
