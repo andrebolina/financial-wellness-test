@@ -17,9 +17,9 @@ Also, I've decided to use Marshmallow since, with a thin integration layer, it p
 From the dev environment perspective, I've decided to use pytests for the unit tests and flake8 to control the code's format and quality. I also added autopep8 to an easier format fix.
 
 ### Requirements
-In order to run the API, you should have Python >= 3.9.1 and Pipenv installed. All commands below are supposed to be run into the `server` folder and require npm installed*.
+In order to run the API, you should have Python >= 3.9.1 and Pipenv installed. All commands below are supposed to be run into the `api` folder and require npm installed*.
 
-<em>* To run the following scripts without using npm, you can check the command line statements into <strong>server/packages.json</strong></em>
+<em>* To run the following scripts without using npm, you can check the command line statements into <strong>api/packages.json</strong></em>
 
 ### `npm run setup`
 Create a pipenv virtual environment and install project dependencies.
@@ -54,7 +54,7 @@ From the dev environment perspective, I've decided to use React Testing Library 
 
 
 ### Requirements
-In order to run the Web Interface, you should have Node.js >= 16.13.0 and npm >= 8.1.0 installed. All commands below are supposed to be run into `client` folder.
+In order to run the Web Interface, you should have Node.js >= 16.13.0 and npm >= 8.1.0 installed. All commands below are supposed to be run into `web` folder.
 
 ### `npm install`
 Installs the project dependencies.
