@@ -1,5 +1,5 @@
 {
-  "name": "challenge-server",
+  "name": "financial-wellness-test-api",
   "version": "0.1.0",
   "scripts": {
     "setup": "pipenv install --dev",

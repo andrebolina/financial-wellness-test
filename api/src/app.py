@@ -2,7 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from api.blueprints import wellness_blueprint
 
-app = Flask("Origin Challenge API by André Bolina")
+app = Flask("Financial Wellness Test API")
 
 cors = CORS(app)
 

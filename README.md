@@ -1,4 +1,4 @@
-# Financial Wellness Test
+# THA: Financial Wellness Test
 
 This project is the <a href="https://www.bolina.dev">André Bolina</a> implementation of the take-home assignment (THA) for the <em>Fullstack Software Engineer | Investment's Team role</em> at <a href="https://www.useorigin.com">Origin</a>.
 
@@ -80,3 +80,8 @@ Checks if Javascript code conforms to Eslint config.
 
 ### `npm run lint:fix`
 Automatically formats Javascript code to conform to Eslint config.
+
+
+## Final note
+
+The business rules from <a href="https://useorigin.notion.site/THA-Web-Interface-API-application-4819947101684706b984f04e9aef9294">THA doc</a> have a gap. If the annual costs represent precisely 25% of his annual net compensation, it doesn't match any business rule. So, noticing the other rule with the '<strong>less</strong> 'conditions has a '<strong>or equal</strong>' condition too, I've decided to change the first rule for '<strong>If the user annual costs represents less than <u>or equal</u> 25% of his annual net compensation, his score is HEALTHY</strong>'.
