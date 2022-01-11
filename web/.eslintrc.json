@@ -91,7 +91,7 @@
     },
     "import/resolver": {
       "node": {
-        "paths": ["src"]
+        "paths": ["web/src", "src"]
       }
     }
   },
