@@ -14,6 +14,8 @@ I've decided to use Flask instead of a heavy-weight framework since the THA has 
 
 Also, I've decided to use Marshmallow since, with a thin integration layer, it provides more control for schemas of the API's requests and response, ensuring the fulfillment of the front-end contracts.
 
+From the dev environment perspective, I've decided to use pytests for the unit tests and flake8 to control the code's format and quality. I also added autopep8 to an easier format fix.
+
 ### Requirements
 In order to run the API, you should have Python >= 3.9.1 and Pipenv installed. All commands below are supposed to be run into the `server` folder and require npm installed*.
 
@@ -42,13 +44,13 @@ Automatically formats Python code to conform to the PEP 8 style guide.
 
 ## Web Interface
 ### Development notes
-I've decided to use Create React App (CRA)..
+I've decided to use Create React App (CRA) to have a quicker start. Also, since the THA requirements aren't complex, I thought I wouldn't need any specific Webpack config. However, if necessary, it's possible, and I did it to use absolute paths and get a cleaner code.
 
-I've decided to create my own components instead use a third-party library (e.g. Material-UI) since we have a own UI style. Therefore, it would require a lot of classes/styles override in the library components. Creating my own components I've reached in same result with a smaller bundle size, providing smooth maintenances (less broken updates and conflicts with another libraries) and turning it easier to be incorpored on another project.
+Since THA has its UI style, I've decided to create my components instead of using a third-party library (e.g., Material-UI). Otherwise, it would require a lot of classes/styles override in the external library components. I've reached the same result with a smaller bundle creating my components. Besides it, avoiding third-party libraries provides smooth maintenances and makes it easier to incorporate on another project.
 
-I've decided to use component wrapper ...
+*For the form + result components I've thought about use a state management library (e.g., Redux or React Query) or another decided to use component wrapper ...
 
-I've decided to use a lot of dev dependencies ...
+From the dev environment perspective, I've decided to use React Testing Library and Jest for the unit tests and Prettier + Eslint to control the code's format and quality. I've decided to use CSS modules to avoid shared styles side-effects and allow a better files structure organization (all files for a single component live in one place). Also, I've used the theme structure to share styles/UI values and facilitate changes in the future.
 
 
 ### Requirements
