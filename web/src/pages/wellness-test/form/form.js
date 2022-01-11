@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button, MoneyField } from "lib/components";
-import PropTypes from "prop-types";
+
+import Context from '../context';
 
 import styles from "./form.module.css";
 
 import logoCircle from "assets/images/brand/origin-circle.png";
-
-function Form({ setFormValues }) {
+function Form() {
+  const [formValues, setFormValues] = useContext(Context);
   const [hasSubmittedOnce, setHasSubmittedOnce] = useState(false);
   const [annualIncome, setAnnualIncome] = useState(null);
   const [monthlyCosts, setMonthlyCosts] = useState(null);
@@ -63,9 +64,5 @@ function Form({ setFormValues }) {
     </>
   );
 }
-
-Form.propTypes = {
-  setFormValues: PropTypes.func.isRequired,
-};
 
 export default Form;

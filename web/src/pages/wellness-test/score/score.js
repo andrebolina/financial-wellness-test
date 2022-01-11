@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Button, HealthBar, LoadingSpinner } from "lib/components";
 import { wellnessScores } from "lib/constants";
-import PropTypes from "prop-types";
 import { apiGet } from "services";
+
+import Context from '../context';
 
 import styles from "./score.module.css";
 
 import logoCircle from "assets/images/brand/origin-circle.png";
 
-function Score({ formValues, onReturn }) {
+function Score() {
+  const [formValues, setFormValues] = useContext(Context);
   const [scoreData, setScoreData] = useState(null);
   const { annualIncome, monthlyCosts } = formValues;
 
@@ -41,19 +43,11 @@ function Score({ formValues, onReturn }) {
         )}
       </div>
 
-      <Button classes={{ button: styles.button }} onClick={onReturn}>
+      <Button classes={{ button: styles.button }} onClick={() => setFormValues(null)}>
         Return
       </Button>
     </>
   );
 }
-
-Score.propTypes = {
-  formValues: PropTypes.shape({
-    annualIncome: PropTypes.number.isRequired,
-    monthlyCosts: PropTypes.number.isRequired,
-  }).isRequired,
-  onReturn: PropTypes.func.isRequired,
-};
 
 export default Score;
