@@ -5,6 +5,8 @@
     "setup": "pipenv install --dev",
     "start": "pipenv run python src/app.py",
     "test": "cd src & pipenv run python -m pytest ../tests",
-    "coverage": "cd src & pipenv run python -m pytest ../tests --cov"
+    "coverage": "cd src & pipenv run python -m pytest ../tests --cov",
+    "lint": "pipenv run flake8",
+    "lint:fix": "pipenv run autopep8 --in-place --recursive ."
   }
 }
