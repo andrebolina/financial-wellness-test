@@ -1,6 +1,6 @@
-# THA: Financial Wellness Test
+# Financial Wellness Test
 
-This project is the <a href="https://www.bolina.dev">André Bolina</a> implementation of the take-home assignment (THA) for the <em>Fullstack Software Engineer | Investment's Team role</em> at <a href="https://www.useorigin.com">Origin</a>.
+This project is the <a href="https://www.bolina.dev">André Bolina</a> implementation of the take-home assignment (THA) for the Fullstack Software Engineer role at <a href="https://www.useorigin.com">Origin</a>.
 
 The THA proposal is to create a Web Interface and an API application for a financial wellness test based on the user's annual gross income and average monthly costs. You can <a href="https://useorigin.notion.site/THA-Web-Interface-API-application-4819947101684706b984f04e9aef9294">click here</a> to access the complete THA doc.
 
