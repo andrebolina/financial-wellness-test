@@ -1,23 +1,25 @@
 import { useContext, useEffect, useState } from "react";
-import { WellnessTestContext } from "contexts";
-import { Button, HealthBar, LoadingSpinner } from "lib/components";
+import { UserIdContext, WellnessTestContext } from "contexts";
+import { Button, HealthBar, LoadingSpinner, PageView } from "lib/components";
 import { wellnessScores } from "lib/constants";
-import { apiGet } from "services";
+import { apiPost } from "services";
 
 import styles from "./score.module.css";
 
 import logoCircle from "assets/images/brand/origin-circle.png";
 
 function Score() {
+  const [userId, ] = useContext(UserIdContext);
   const [formValues, setFormValues] = useContext(WellnessTestContext);
   const [scoreData, setScoreData] = useState(null);
   const { annualIncome, monthlyCosts } = formValues;
 
   useEffect(() => {
-    apiGet(`wellness/${annualIncome}/${monthlyCosts}`).then(response => {
+    apiPost('wellness/score', {body: JSON.stringify({annual_income: annualIncome, monthly_costs: monthlyCosts, user_id: userId})})
+    .then(response => {
       setScoreData(wellnessScores[response.score]);
     });
-  }, [annualIncome, monthlyCosts]);
+  }, [annualIncome, monthlyCosts, userId]);
 
   return (
     <>
@@ -48,6 +50,8 @@ function Score() {
       >
         Return
       </Button>
+
+      { scoreData ? <PageView content={scoreData} /> : null }
     </>
   );
 }

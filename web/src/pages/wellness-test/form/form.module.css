@@ -1,4 +1,4 @@
-@value v-blueGray400, v-blueGray900, v-brandColorPrimary, v-neutralWhite from 'theme/palette.css';
+@value v-blueGray10, v-blueGray50, v-blueGray100, v-blueGray400, v-blueGray600, v-blueGray900, v-brandColorPrimary, v-neutralWhite from 'theme/palette.css';
 @value b-desktop from 'theme/breakpoints.css';
 
 .formContainer {
@@ -49,6 +49,48 @@
   border: none;
   color: v-neutralWhite;
   background-color: v-brandColorPrimary;
+}
+
+.subHeading {
+  margin: 32px 0 16px;
+  text-align: left;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: v-blueGray600;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table td {
+  width: 25%;
+  padding: 16px;
+  font-size: 16px;
+  color: v-blueGray600;
+  text-align: left;
+}
+
+.thead .td:first-child {
+  border-radius: 8px;
+}
+
+.thead .td:last-child {
+  border-radius: 8px;
+}
+
+.thead td {
+  background-color: v-blueGray50;
+  font-weight: 600;
+  border-bottom: 2px solid #CBD5DC;
+}
+
+.tbody tr:nth-child(even) {
+  background-color: v-blueGray10;
 }
 
 @media b-desktop {

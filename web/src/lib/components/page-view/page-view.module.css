@@ -1,0 +1,41 @@
+@values v-blueGray600 from 'theme/palette.css';
+
+.container {
+    margin-top: 24px;
+    box-shadow: 0px 2px 10px rgba(30, 42, 50, 0.08);
+}
+
+.banner {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    background-color: white;
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #8902FD;
+}
+
+.textContainer {
+    padding: 16px 24px 24px 24px;
+    text-align: left;
+}
+
+.title {
+    color: #1B31A8;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.description {
+    font-size: 14px;
+    color: v-blueGray600;
+}
